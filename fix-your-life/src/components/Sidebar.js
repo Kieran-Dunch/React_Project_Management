@@ -14,13 +14,13 @@ export default function Sidebar() {
         </div>
         <nav>
           <ul>
-            <li>
-              <NavLink to='/'>
+            <li className='links'>
+              <NavLink exact to='/'>
                 <img src={DashboardIcon} alt="dashboard icon" />
                 <span>Dashboard</span>
               </NavLink>
             </li>
-            <li>
+            <li className='links'>
               <NavLink to='/create'>
                 <img src={AddIcon} alt="Add project icon" />
                 <span>New project</span>

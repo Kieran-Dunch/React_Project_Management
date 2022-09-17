@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Sidebar />
         <div className="container">
           <Navbar />
-          <Sidebar />
           <Switch>
             <Route path='/'>
               <Dashboard />
