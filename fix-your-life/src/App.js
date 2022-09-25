@@ -19,7 +19,7 @@ function App() {
         <div className="container">
           <Navbar />
           <Switch>
-            <Route path='/'>
+            <Route exact path='/'>
               <Dashboard />
             </Route>
             <Route path='/create'>
