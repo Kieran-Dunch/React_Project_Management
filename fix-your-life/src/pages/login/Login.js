@@ -1,6 +1,7 @@
 // styles
 import { useState } from 'react'
 import './Login.css'
+import { login, isPending, error } from '../../hooks/useLogin'
 
 
 export default function Login() {
@@ -9,7 +10,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email, password)
+    login(email, password)
   }
 
   return (
@@ -34,9 +35,9 @@ export default function Login() {
         />
       </label>
       <button>Login</button>
-      {/* {!isPending && <button className='btn'>Login</button>}
+      {!isPending && <button className='btn'>Login</button>}
       {isPending && <button className='btn' disabled>Loading</button>}
-      {error && <div className="error">{error}</div>} */}
+      {error && <div className="error">{error}</div>}
     </form>
   )
 }
