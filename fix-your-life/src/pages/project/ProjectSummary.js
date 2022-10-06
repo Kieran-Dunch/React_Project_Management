@@ -8,7 +8,7 @@ export default function ProjectSummary({ project }) {
   const { user } = useAuthContext();
   const navigate = useNavigate();
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     deleteDocument(project.id);
     navigate("/");
   };

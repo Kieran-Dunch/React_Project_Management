@@ -18,11 +18,11 @@ export default function ProjectComments({ project }) {
       photoURL: user.photoURL,
       content: newComment,
       createdAt: timestamp.fromDate(new Date()),
-      id: Math.random()
+      id: Math.random(),
     };
 
     await updateDocument(project.id, {
-      comments: [...project.comments, commentToAdd]
+      comments: [...project.comments, commentToAdd],
     });
     if (!response.error) {
       setNewComment("");
@@ -41,7 +41,11 @@ export default function ProjectComments({ project }) {
                 <p>{comment.displayName}</p>
               </div>
               <div className="comment-date">
-                <p>{FormatDistanceToNow(comment.createdAt.toDate(), { addSuffix: true })}</p>
+                <p>
+                  {FormatDistanceToNow(comment.createdAt.toDate(), {
+                    addSuffix: true,
+                  })}
+                </p>
               </div>
               <div className="comment-content">
                 <p>{comment.content}</p>

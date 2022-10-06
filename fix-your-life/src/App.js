@@ -24,11 +24,26 @@ function App() {
           <div className="container">
             <Navbar />
             <Routes>
-              <Route path="/" element={user ? <Dashboard /> : <Navigate to="/login" />} />
-              <Route path="/create" element={user ? <Create /> : <Navigate to="/login" />} />
-              <Route path="/projects/:id" element={user ? <Project /> : <Navigate to="/login" />} />
-              <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
-              <Route path="/signup" element={user ? <Navigate to="/" /> : <Signup />} />
+              <Route
+                path="/"
+                element={user ? <Dashboard /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/create"
+                element={user ? <Create /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/projects/:id"
+                element={user ? <Project /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/login"
+                element={user ? <Navigate to="/" /> : <Login />}
+              />
+              <Route
+                path="/signup"
+                element={user ? <Navigate to="/" /> : <Signup />}
+              />
             </Routes>
           </div>
           {user && <OnlineUsers />}
