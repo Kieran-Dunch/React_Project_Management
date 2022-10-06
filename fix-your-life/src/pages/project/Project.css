@@ -39,7 +39,7 @@
   margin-right: 10px;
 }
 
-.project-summary+.btn {
+.project-summary + .btn {
   margin-top: 20px;
 }
 
