@@ -1,3 +1,5 @@
+import { PropTypes } from "prop-types";
+
 const filterList = [
   "all",
   "mine",
@@ -29,3 +31,8 @@ export default function ProjectFilter({ currentFilter, changeFilter }) {
     </div>
   );
 }
+
+ProjectFilter.propTypes = {
+  currentFilter: PropTypes.string,
+  changeFilter: PropTypes.string,
+};

@@ -1,4 +1,5 @@
 import Avatar from "../../components/Avatar";
+import PropTypes from "prop-types";
 import { useFirestore } from "../../hooks/useFirestore";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +19,9 @@ export default function ProjectSummary({ project }) {
       <div className="project-summary">
         <h2 className="page-title">{project.name}</h2>
         <p>By {project.createdBy.displayName}</p>
-        <p className="due-date">Project due by {project.dueDate.toDate().toDateString()}</p>
+        <p className="due-date">
+          Project due by {project.dueDate.toDate().toDateString()}
+        </p>
         <p className="details">{project.details}</p>
         <h4>Project assigned to:</h4>
         <div className="assigned-users">
@@ -39,3 +42,7 @@ export default function ProjectSummary({ project }) {
     </div>
   );
 }
+
+ProjectSummary.propTypes = {
+  project: PropTypes.object,
+};
