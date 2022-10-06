@@ -24,7 +24,9 @@ export default function Project() {
       <ProjectSummary
         project={document}
       />
-      <ProjectComments />
+      <ProjectComments
+        project={document}
+      />
     </div>
   )
 }
