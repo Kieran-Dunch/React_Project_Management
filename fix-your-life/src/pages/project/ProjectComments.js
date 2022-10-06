@@ -4,6 +4,7 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 import { useFirestore } from "../../hooks/useFirestore";
 import Avatar from "../../components/Avatar";
 import FormatDistanceToNow from "date-fns/formatDistanceToNow";
+import { PropTypes } from "prop-types";
 
 export default function ProjectComments({ project }) {
   const [newComment, setNewComment] = useState();
@@ -68,3 +69,7 @@ export default function ProjectComments({ project }) {
     </div>
   );
 }
+
+ProjectComments.propTypes = {
+  project: PropTypes.object,
+};

@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import "./Avatar.css";
 
 export default function Avatar({ src }) {
@@ -6,4 +7,8 @@ export default function Avatar({ src }) {
       <img src={src} alt="User avatar" />
     </div>
   );
+}
+
+Avatar.propTypes = {
+  src: PropTypes.string
 }

@@ -1,5 +1,6 @@
-// styles
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+// styles
 import Avatar from "./Avatar";
 
 // styles
@@ -27,3 +28,7 @@ export default function ProjectList({ projects }) {
     </div>
   );
 }
+
+ProjectList.propTypes = {
+  projects: PropTypes.array,
+};

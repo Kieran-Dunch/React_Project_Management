@@ -1,5 +1,6 @@
 import { createContext, useReducer, useEffect } from "react";
 import { projectAuth } from "../firebase/config";
+import PropTypes from 'prop-types';
 
 export const AuthContext = createContext();
 
@@ -33,3 +34,6 @@ export const AuthContextProvider = ({ children }) => {
 
   return <AuthContext.Provider value={{ ...state, dispatch }}>{children}</AuthContext.Provider>;
 };
+AuthContextProvider.propTypes = {
+  children: PropTypes.any
+}
