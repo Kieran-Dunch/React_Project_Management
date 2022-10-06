@@ -1,11 +1,9 @@
-
-const filterList = ['all', 'mine', 'development', 'design', 'marketing', 'sales']
+const filterList = ["all", "mine", "development", "design", "marketing", "sales"];
 
 export default function ProjectFilter({ currentFilter, changeFilter }) {
-
   const handleClick = (newFilter) => {
-    changeFilter(newFilter)
-  }
+    changeFilter(newFilter);
+  };
 
   return (
     <div className="project-filter">
@@ -15,12 +13,12 @@ export default function ProjectFilter({ currentFilter, changeFilter }) {
           <button
             key={filter}
             onClick={() => handleClick(filter)}
-            className={currentFilter === filter ? 'active' : ''}
+            className={currentFilter === filter ? "active" : ""}
           >
             {filter}
           </button>
         ))}
       </nav>
     </div>
-  )
+  );
 }
